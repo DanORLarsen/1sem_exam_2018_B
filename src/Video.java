@@ -10,10 +10,6 @@ private String photographer;
         return filetype;
     }
 
-    public void setFiletype(String filetype) {
-        this.filetype = filetype;
-    }
-
     public String getResolution() {
         return resolution;
     }
