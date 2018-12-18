@@ -1,3 +1,11 @@
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 public class Billede extends Media {
     //Beskære fileName for at få de sidste 3 bogstaver, da alle typerne er på 3 bogstaver
     private String filetype;
@@ -10,20 +18,16 @@ public class Billede extends Media {
         return filetype;
     }
 
-    public int getWidth() {
+    public int getWidth() throws IOException {
+        BufferedImage bimg = (BufferedImage) ImageIO.read(new File("media\\\\" + getFileName()));
+        width = bimg.getWidth();
         return width;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
+    public int getHeight() throws IOException {
+        BufferedImage bimg = (BufferedImage) ImageIO.read(new File("media\\\\" + getFileName()));
+        height = bimg.getHeight();
         return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     public String getPhotographer() {

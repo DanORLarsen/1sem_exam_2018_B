@@ -16,6 +16,7 @@ public class Artikel extends Media {
     private File picture;
 
     public String getAuthor() {
+        //Dette er meget specifikt i forhold til mit indhold, så derfor bliver det Alexander hvis det ikke er julemand artiklen.
         if(getName()=="julemand")
             author = "Beata Lux";
         else
@@ -23,7 +24,7 @@ public class Artikel extends Media {
         return author;
     }
 
-
+//Getter metode er samtidig også min setter metode.
     public String getArticelText() throws IOException {
         StringBuilder contentBuilder = new StringBuilder();
         try (Stream<String> stream = Files.lines( Paths.get("media\\\\" + getFileName()), StandardCharsets.UTF_8))
@@ -36,10 +37,6 @@ public class Artikel extends Media {
         }
         articelText = contentBuilder.toString();
         return articelText;
-    }
-
-    public void setArticelText(String articelText) {
-        this.articelText = articelText;
     }
 
     public File getPicture() {
