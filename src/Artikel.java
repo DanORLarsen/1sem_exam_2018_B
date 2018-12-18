@@ -26,26 +26,24 @@ public class Artikel extends Media {
 
 //Getter metode er samtidig også min setter metode.
     public String getArticelText() throws IOException {
-        StringBuilder contentBuilder = new StringBuilder();
+        StringBuilder text = new StringBuilder();
         try (Stream<String> stream = Files.lines( Paths.get("media\\\\" + getFileName()), StandardCharsets.UTF_8))
         {
-            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+            stream.forEach(s -> text.append(s).append("\n"));
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
-        articelText = contentBuilder.toString();
+        articelText = text.toString();
         return articelText;
     }
 
     public File getPicture() {
+        picture = new File("media\\\\\\\\"+ getName() +"jpg");
         return picture;
     }
 
-    public void setPicture(File picture) {
-        this.picture = picture;
-    }
 
     @Override
     public void logToConsol() {

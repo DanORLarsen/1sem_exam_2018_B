@@ -18,6 +18,7 @@ public class Billede extends Media {
         return filetype;
     }
 
+    //Brguer bufferedImage til at kunne aflæse højde og brede
     public int getWidth() throws IOException {
         BufferedImage bimg = (BufferedImage) ImageIO.read(new File("media\\\\" + getFileName()));
         width = bimg.getWidth();
@@ -31,6 +32,7 @@ public class Billede extends Media {
     }
 
     public String getPhotographer() {
+        photographer = "Ukendt";
         return photographer;
     }
 
