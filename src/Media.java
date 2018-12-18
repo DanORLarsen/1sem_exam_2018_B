@@ -76,38 +76,38 @@ public class Media {
             sb.append(fileList[i]);
             sb.delete(0,6);
             fileArray.add(sb.toString());
-            String navn = sb.toString();
+            String navnet = sb.toString();
             sb.delete(0,sb.length()-3);
             if (sb.toString().equalsIgnoreCase("jpg")){
                 if (billedeCount == 0) {
                     Billede b5 = new Billede();
-                    b5.setFileName(navn);
+                    b5.setFileName(navnet);
                     billedeCount++;
                 }
                 if (billedeCount == 1){
                     Billede b6 = new Billede();
-                    b6.setFileName(navn);
+                    b6.setFileName(navnet);
                     billedeCount++;
                  }
                  if (billedeCount == 2) {
                      Billede b7 = new Billede();
-                     b7.setFileName(navn);
+                     b7.setFileName(navnet);
                  }
             }
             if (sb.toString().equalsIgnoreCase("txt")){
                 if (artikelCount == 0){
                     Artikel a5 = new Artikel();
-                    a5.setFileName(navn);
+                    a5.setFileName(navnet);
                     artikelCount++;
                 }
                 if (artikelCount == 1){
                     Artikel a6 = new Artikel();
-                    a6.setFileName(navn);
+                    a6.setFileName(navnet);
                     artikelCount++;
                 }
                 if (artikelCount == 2){
                     Artikel a7 = new Artikel();
-                    a7.setFileName(navn);
+                    a7.setFileName(navnet);
                 }
             }
         }
