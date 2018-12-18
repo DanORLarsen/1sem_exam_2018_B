@@ -48,6 +48,10 @@ public class Media {
         this.fileName = fileName;
     }
 
+    public void logToConsol() {
+        System.out.println(this.name + " is a Media");
+    }
+
     //Override object classens to string metode, med selv lavet metode.
     @Override
     public String toString() {
