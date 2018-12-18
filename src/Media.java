@@ -52,6 +52,8 @@ public class Media {
         System.out.println(this.name + " is a Media");
     }
 
+
+
     //Override object classens to string metode, med selv lavet metode.
     @Override
     public String toString() {

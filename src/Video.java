@@ -1,9 +1,41 @@
 public class Video extends Media{
-
-private String filetype;
+    //Beskære fileName for at få de sidste 3 bogstaver, da alle typerne er på 3 bogstaver
+private String filetype = this.getFileName().substring(this.getFileName().length()-3);
 private String resolution;
 private int lenght;
 private String photographer;
+
+    public String getFiletype() {
+        return filetype;
+    }
+
+    public void setFiletype(String filetype) {
+        this.filetype = filetype;
+    }
+
+    public String getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(String resolution) {
+        this.resolution = resolution;
+    }
+
+    public int getLenght() {
+        return lenght;
+    }
+
+    public void setLenght(int lenght) {
+        this.lenght = lenght;
+    }
+
+    public String getPhotographer() {
+        return photographer;
+    }
+
+    public void setPhotographer(String photographer) {
+        this.photographer = photographer;
+    }
 
     @Override
     public void logToConsol() {

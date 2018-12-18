@@ -8,10 +8,12 @@ public class Test {
 
         System.out.println("TV2 Media Manager");
 
-        Media m1 = new Media();
+        Billede m1 = new Billede();
         m1.setName("Julemanden");
         m1.setFileName("julemand.jpg");
+        System.out.println(m1.getFiletype());
         System.out.println(m1.toString());
+
 
         // Her kommer din kode
 
