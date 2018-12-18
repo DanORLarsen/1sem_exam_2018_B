@@ -1,5 +1,6 @@
 import java.io.File;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Media {
@@ -64,9 +65,18 @@ public class Media {
         }
     }
 
-
-
-
+    public ArrayList readMediaFolder(String folderNavn) {
+        File folder = new File(folderNavn + "\\\\\\\\");
+        ArrayList fileArray = new ArrayList();
+        File[] fileList = folder.listFiles();
+        for (int i = 0; i < fileList.length; i++) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(fileList[i]);
+            sb.delete(0,6);
+            fileArray.add(sb.toString());
+        }
+        return fileArray;
+    }
     //Override object classens to string metode, med selv lavet metode.
     @Override
     public String toString() {

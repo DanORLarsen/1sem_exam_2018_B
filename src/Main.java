@@ -25,7 +25,12 @@ public class Main {
       Video v1 = new Video();
       v1.setFileName("video1.mp4");
       v1.setName("video1");
-      v1.logMediaFolder("media");
+
+        for (int i = 0; i < v1.readMediaFolder("media").size() ; i++) {
+            System.out.println(v1.readMediaFolder("media").get(i));
+        }
+
+
       v1.logToConsol();
         System.out.println(v1.getFiletype());
         System.out.println(v1.getLenght());
