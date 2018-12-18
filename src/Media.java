@@ -52,6 +52,19 @@ public class Media {
         System.out.println(this.name + " is a Media");
     }
 
+    public void logMediaFolder(String folderNavn) {
+        File folder = new File(folderNavn+"\\\\\\\\");
+        File[] fileList = folder.listFiles();
+        for (int i = 0; i < fileList.length ; i++) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(fileList[i]);
+            sb.delete(0,6);
+            //Så skriver den ikke media\ foran alle sammen.
+            System.out.println(sb);
+        }
+    }
+
+
 
 
     //Override object classens to string metode, med selv lavet metode.

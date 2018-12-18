@@ -25,7 +25,13 @@ public class Main {
       Video v1 = new Video();
       v1.setFileName("video1.mp4");
       v1.setName("video1");
-        System.out.println(v1.getResolution());
+      v1.logMediaFolder("media");
+      v1.logToConsol();
+        System.out.println(v1.getFiletype());
+        System.out.println(v1.getLenght());
+        System.out.println(v1.getAssetId());
+        System.out.println(v1.getCreated());
+
     }
 }
 
