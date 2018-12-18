@@ -3,6 +3,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+//DET LYKKES MIG IKKE AT FÅ TINGENE TIL AT FUNGERE I DENNE CLASS.
 
 public class Video extends Media{
     //Beskære fileName for at få de sidste 3 bogstaver, da alle typerne er på 3 bogstaver

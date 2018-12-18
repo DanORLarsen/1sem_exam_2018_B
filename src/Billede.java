@@ -12,7 +12,6 @@ public class Billede extends Media {
     private int width;
     private int height;
     private String photographer;
-
     public String getFiletype() {
         filetype = this.getFileName().substring(this.getFileName().length()-3);
         return filetype;

@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class MediaManager {
     public static void main(String[] args) throws IOException {
-
+//Denne class er brugt til at kontrollere at det jeg ville havde var det jeg fik.
         Artikel art1 = new Artikel();
         art1.setName("Julemand");
         art1.setFileName("julemand.txt");

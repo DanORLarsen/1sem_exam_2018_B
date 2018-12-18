@@ -12,12 +12,11 @@ public class Database {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        Scanner sc = new Scanner(System.in);
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/tv2?useUnicode=true&useJDBCCompliantTimezooneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
 
 
         Statement statement = connection.createStatement();
-
+//Initialisere en masse objecter og putter dem i ArrayList
         Artikel art1 = new Artikel();
         art1.setName("Julemand");
         art1.setFileName("julemand.txt");
@@ -41,7 +40,7 @@ public class Database {
         medias.add(b1);
         medias.add(b2);
         medias.add(b3);
-
+//Her anvender jeg en masse IF statements, ville gerne kunne bruge IF = artikel, men kunne ikke få det til at fungere.
         for (int i = 0; i < medias.size(); i++) {
             if (medias.get(i) == art1)
             { String sql = "INSERT INTO `artikler` (`Navn`, `Forfatter`, `FileType`) VALUES ('"+art1.getName()+"', '"+ art1.getAuthor() +"', 'txt');";

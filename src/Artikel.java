@@ -26,6 +26,7 @@ public class Artikel extends Media {
 
 //Getter metode er samtidig også min setter metode.
     public String getArticelText() throws IOException {
+        //Her anvender jeg StringBuilder fordi det er dejligt nemt at tilføje og tilsidst lave det til normal string.
         StringBuilder text = new StringBuilder();
         try (Stream<String> stream = Files.lines( Paths.get("media\\\\" + getFileName()), StandardCharsets.UTF_8))
         {
@@ -38,7 +39,7 @@ public class Artikel extends Media {
         articelText = text.toString();
         return articelText;
     }
-
+//Så kan man få fat i billede filen tilhørende Artiklen
     public File getPicture() {
         picture = new File("media\\\\\\\\"+ getName() +"jpg");
         return picture;
