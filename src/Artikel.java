@@ -17,7 +17,7 @@ public class Artikel extends Media {
 
     public String getAuthor() {
         //Dette er meget specifikt i forhold til mit indhold, så derfor bliver det Alexander hvis det ikke er julemand artiklen.
-        if(getName()=="julemand")
+        if(getName().equalsIgnoreCase("julemand"))
             author = "Beata Lux";
         else
             author = "Alexander Klemp";
