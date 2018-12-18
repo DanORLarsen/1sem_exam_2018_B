@@ -66,6 +66,8 @@ public class Media {
     }
 
     public ArrayList readMediaFolder(String folderNavn) {
+        int billedeCount = 0;
+        int artikelCount = 0;
         File folder = new File(folderNavn + "\\\\\\\\");
         ArrayList fileArray = new ArrayList();
         File[] fileList = folder.listFiles();
@@ -74,6 +76,40 @@ public class Media {
             sb.append(fileList[i]);
             sb.delete(0,6);
             fileArray.add(sb.toString());
+            String navn = sb.toString();
+            sb.delete(0,sb.length()-3);
+            if (sb.toString().equalsIgnoreCase("jpg")){
+                if (billedeCount == 0) {
+                    Billede b5 = new Billede();
+                    b5.setFileName(navn);
+                    billedeCount++;
+                }
+                if (billedeCount == 1){
+                    Billede b6 = new Billede();
+                    b6.setFileName(navn);
+                    billedeCount++;
+                 }
+                 if (billedeCount == 2) {
+                     Billede b7 = new Billede();
+                     b7.setFileName(navn);
+                 }
+            }
+            if (sb.toString().equalsIgnoreCase("txt")){
+                if (artikelCount == 0){
+                    Artikel a5 = new Artikel();
+                    a5.setFileName(navn);
+                    artikelCount++;
+                }
+                if (artikelCount == 1){
+                    Artikel a6 = new Artikel();
+                    a6.setFileName(navn);
+                    artikelCount++;
+                }
+                if (artikelCount == 2){
+                    Artikel a7 = new Artikel();
+                    a7.setFileName(navn);
+                }
+            }
         }
         return fileArray;
     }
