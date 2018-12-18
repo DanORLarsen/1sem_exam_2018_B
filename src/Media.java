@@ -4,12 +4,13 @@ import java.util.Date;
 
 public class Media {
 
+    //Starter med nogle forskellige privates, som får oprettet getters n setters.
     private int assetId;
     private String name;
     private Date created = new Date();
     private String fileName;
 
-
+//No arg constructor, denne constructor giver Media objectet et assetID og en dato for skabelsen af objectet.
     public Media() {
         assetId = MediaID.generate();
         created = Date.from(Instant.now());
@@ -47,6 +48,7 @@ public class Media {
         this.fileName = fileName;
     }
 
+    //Override object classens to string metode, med selv lavet metode.
     @Override
     public String toString() {
         return "Media{" +
