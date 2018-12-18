@@ -28,5 +28,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="mysql-connector-java-8.0.13" level="project" />
+    <orderEntry type="library" name="Arquillian JUnit:Release" level="project" />
   </component>
 </module>

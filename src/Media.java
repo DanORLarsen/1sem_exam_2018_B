@@ -10,6 +10,8 @@ public class Media {
     private String name;
     private Date created = new Date();
     private String fileName;
+    //Tilføjede en boolean for at kunne skelne mellem userUpload og ikke, så når man lavede objecterne kunne man lave en UserConstuctor der lavede alle dem der blev lagt op som True.
+    private boolean userUpload = false;
 
 //No arg constructor, denne constructor giver Media objectet et assetID og en dato for skabelsen af objectet.
     public Media() {
